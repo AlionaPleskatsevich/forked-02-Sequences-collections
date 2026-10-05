@@ -18,7 +18,8 @@ for person in employees:
      emp[year].append(person["salary"])
     else:
        emp[year] = [salary]
-print(emp) 
-#эта задача по сути решается те ми же действиями, что и предыдущая. Только нужно еще отсортировать по году
-#но я все так же не понимаю, как
-
+#print(emp)
+for el in sorted(emp):
+   salaries = emp[el]
+   avg_salary = sum(salaries)/len(salaries)
+   print(f"{el}:{avg_salary}")
